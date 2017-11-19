@@ -8,17 +8,19 @@ parameters = YAML.load_file(File.join(__dir__, 'parameters.yml'))
 
 # loop through yaml file and create parameters specified
 parameters.each do |name, values|
-  description = values[0]
-  parameter_value = values[1]
-  type = values[2]
+  type = values[0]
+  description = values[1]
+  parameter_value = values[2]
+  
 
   # Create error handling to output sane errors
   begin
     # use ps module and put parameter method to create parameters
-    PS.put_parameter(name, description, parameter_value, type)
+    PS.put_parameter(name, type, description, parameter_value)
   rescue Aws::SSM::Errors::ServiceError => e
-    puts 'Error Creating Parameter:   ' + name
-    puts "An error of type #{e.class} happened, message is:\n"
-    puts e.message
+    puts 'Error Creating Parameter: ' + name
+    #puts "An error of type #{e.class} happened, message is:\n"
+    #puts e.message
+    puts "#{e.class} #{e.message}"
   end
 end
