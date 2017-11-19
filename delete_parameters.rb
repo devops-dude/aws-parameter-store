@@ -13,7 +13,7 @@ parameters.each_key do |name|
   	# use ps module and put parameter method to delete parameters
     PS.delete_parameter(name)
   rescue Aws::SSM::Errors::ServiceError => e
-    puts "Error deleting" + name + ":"
+  	puts "Error Deleting Parameter:   " + name
     puts "An error of type #{e.class} happened, message is:\n #{e.message}"
   end
 end
