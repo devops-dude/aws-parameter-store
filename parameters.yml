@@ -1,8 +1,8 @@
 # Parameter store parameters and values
 # name
 #   - description
-#   - type - accepts String, StringList, SecureString
 #   - value
+#   - type - accepts String, StringList, SecureString
 
 test1:
   - "Description 1"
