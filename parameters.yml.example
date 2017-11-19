@@ -14,6 +14,6 @@ secret:
   - 'Secret Password'
   - 'password'
 #test3:
-#  - SecureList'
+#  - 'SecureList'
 #  - "Description 3"
 #  - 'test3value, test3value2, test3value3'

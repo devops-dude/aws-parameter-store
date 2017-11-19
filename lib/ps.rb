@@ -10,8 +10,7 @@ module PS
       name: parameter_name,
       with_decryption: with_decryption
     )
-    # return value for usage with other scripts, or is return automatic?
-    # rubocop seems to think return is unecessary
+    # return value
     resp.parameter.value
   end
 
