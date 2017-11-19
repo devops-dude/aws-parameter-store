@@ -17,7 +17,8 @@ parameters.each do |parameter_name, values|
 
   begin
     # use ps module and put parameter method to fetch parameters
-    puts PS.get_parameter(parameter_name, with_decryption)
+    print "#{parameter_name}="
+    print PS.get_parameter(parameter_name, with_decryption) + "\n"
   # error handling AWS CLI output
   rescue Aws::SSM::Errors::ServiceError => e
     puts 'Error Fetching Parameter: ' + parameter_name

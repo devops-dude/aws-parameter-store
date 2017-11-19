@@ -24,5 +24,9 @@ Cleans up parameters created by the parameter.yml file.
 ```
 rake check
 ```
-
 Checks each parameter store in parameter store and ouputs their values.
+
+```
+rake -q check
+```
+Suppress rake message and output variables where paramter=key.
