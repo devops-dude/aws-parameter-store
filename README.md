@@ -1,10 +1,13 @@
-
-# aws-parameter-store is a Ruby app for creating, deleting and retrieving a list of parameters
+# aws-parameter-store 
+A Ruby app for creating, deleting and retrieving a list of parameters
 
 
 ## Documentation
 
 This project uses the [AWS Ruby sdk] https://aws.amazon.com/documentation/sdk-for-ruby/
+
+
+## Usage
 
 Currently you can use the following commands:
 
