@@ -11,7 +11,6 @@ parameters.each do |name, values|
   type = values[0]
   description = values[1]
   parameter_value = values[2]
-  
 
   # Create error handling to output sane errors
   begin
@@ -19,8 +18,6 @@ parameters.each do |name, values|
     PS.put_parameter(name, type, description, parameter_value)
   rescue Aws::SSM::Errors::ServiceError => e
     puts 'Error Creating Parameter: ' + name
-    #puts "An error of type #{e.class} happened, message is:\n"
-    #puts e.message
-    puts "#{e.class} #{e.message}"
+    puts "#{e.class} " + e.message
   end
 end

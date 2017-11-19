@@ -12,7 +12,7 @@ module PS
     )
     # return value for usage with other scripts, or is return automatic?
     # rubocop seems to think return is unecessary
-    return resp.parameter.value
+    resp.parameter.value
   end
 
   def self.put_parameter(parameter_name, type, description, value)
