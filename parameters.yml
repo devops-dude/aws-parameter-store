@@ -1,17 +1,18 @@
 # Parameter store parameters and values
 # name
+#   - type - accepts String, StringList, SecureString
 #   - description
 #   - value
-#   - type - accepts String, StringList, SecureString
 
-test1:
-  - "Description 1"
-  - stringValue
-  - String
-test2:
-  - "Description 2"
-  - secureValue
-  - SecureString
+environment:
+  - 'String'
+  - 'Staging Environment'
+  - 'production'
+
+secret:
+  - 'SecureString'
+  - 'Secret Password'
+  - 'password'
 #test3:
 #  - "Description 3"
 #  - 'test3value, test3value2, test3value3'
