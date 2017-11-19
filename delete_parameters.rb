@@ -14,8 +14,6 @@ parameters.each_key do |name|
     PS.delete_parameter(name)
   rescue Aws::SSM::Errors::ServiceError => e
     puts "Error deleting" + name + ":"
-    puts "An error of type #{e.class} happened, message is #{e.message}"
-    puts e.message
-   #  puts e.backtrace.inspect
+    puts "An error of type #{e.class} happened, message is:\n #{e.message}"
   end
 end
