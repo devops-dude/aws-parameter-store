@@ -1,1 +1,4 @@
+.bundle
 parameters.yml
+coverage
+coverage.data

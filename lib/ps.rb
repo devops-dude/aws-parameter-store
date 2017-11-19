@@ -3,7 +3,7 @@
 require 'aws-sdk'
 
 # Parameter store module
-module PS
+class PS
   @client = Aws::SSM::Client.new
   def self.get_parameter(parameter_name, with_decryption)
     resp = @client.get_parameter(
