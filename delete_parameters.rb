@@ -12,6 +12,7 @@ parameters.each_key do |name|
   begin
     # use ps module and put parameter method to delete parameters
     PS.delete_parameter(name)
+  # error handling AWS CLI output
   rescue Aws::SSM::Errors::ServiceError => e
     puts 'Error Creating Parameter: ' + name
     puts "#{e.class} #{e.message}"

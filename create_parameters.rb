@@ -16,6 +16,7 @@ parameters.each do |name, values|
   begin
     # use ps module and put parameter method to create parameters
     PS.put_parameter(name, type, description, parameter_value)
+  # error handling AWS CLI output
   rescue Aws::SSM::Errors::ServiceError => e
     puts 'Error Creating Parameter: ' + name
     puts "#{e.class} " + e.message

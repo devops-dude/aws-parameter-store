@@ -13,7 +13,7 @@ parameters.each do |parameter_name, values|
 
   # if type is SecureString set with_decryption to true else set it to false
   # true or false is required by the AWS CLI to lookup a parameter
-  type == 'SecureString' ? with_decryption = true : false
+  type == 'String' ? with_decryption = false : true
 
   begin
     # use ps module and put parameter method to fetch parameters
