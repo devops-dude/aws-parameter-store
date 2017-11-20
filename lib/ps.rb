@@ -2,18 +2,20 @@
 
 require 'aws-sdk'
 
-# Parameter store module
+# Parameter store class
 class PS
   @client = Aws::SSM::Client.new
+
+  # PS.get_parameter method
   def self.get_parameter(parameter_name, with_decryption)
     resp = @client.get_parameter(
       name: parameter_name,
       with_decryption: with_decryption
     )
-    # return value
-    resp.parameter.value
+    resp.parameter.value # return value
   end
 
+  # PS.put_parameter method
   def self.put_parameter(parameter_name, type, description, value)
     @client.put_parameter(
       name: parameter_name,
@@ -24,6 +26,7 @@ class PS
     puts "Parameter #{parameter_name} was created.\n"
   end
 
+  # PS.delete_parameter method
   def self.delete_parameter(parameter_name)
     @client.delete_parameter(
       name: parameter_name

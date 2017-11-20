@@ -13,7 +13,6 @@ parameters.each do |parameter_name, values|
 
   # if type is String set with_decryption to false else set it to true
   # true or false is required by the AWS CLI to lookup a parameter
-
   if type == 'String'
     with_decryption = false
   elsif type != 'String'
