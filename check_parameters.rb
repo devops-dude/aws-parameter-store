@@ -11,9 +11,14 @@ parameters = YAML.load_file(File.join(__dir__, 'parameters.yml'))
 parameters.each do |parameter_name, values|
   type = values[0]
 
-  # if type is SecureString set with_decryption to true else set it to false
+  # if type is String set with_decryption to false else set it to true
   # true or false is required by the AWS CLI to lookup a parameter
-  type == 'String' ? with_decryption = false : true
+
+  if type == 'String'
+    with_decryption = false
+  elsif type != 'String'
+    with_decryption = true
+  end
 
   begin
     # use ps module and put parameter method to fetch parameters
