@@ -29,4 +29,4 @@ Checks each parameter store in parameter store and ouputs their values.
 ```
 rake -q check
 ```
-Suppress rake message and output variables where paramter=key.
+Suppress rake message and output variables where parameter=value.
