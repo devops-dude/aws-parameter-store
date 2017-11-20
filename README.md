@@ -4,7 +4,7 @@ A Ruby app for creating, deleting and retrieving a list of parameters
 
 ## Documentation
 
-This project uses the [AWS Ruby sdk] https://aws.amazon.com/documentation/sdk-for-ruby/
+This project uses the [AWS Ruby sdk](https://aws.amazon.com/documentation/sdk-for-ruby/)
 
 
 ## Usage
